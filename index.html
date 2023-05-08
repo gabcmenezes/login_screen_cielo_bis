@@ -11,14 +11,14 @@
             background-image: linear-gradient(45deg, #2B363D, #00AEEF);
         }
         div{
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(255, 255, 255, 0.59);
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
             padding: 80px;
             border-radius: 15px;
-            color: #fff;
+            color: rgba(255, 255, 255, 0.922);
         }
         input{
             padding: 15px;
@@ -40,6 +40,12 @@
             background-color: deepskyblue;
             cursor: pointer;
         }
+        img {
+            width: 150px;
+            height: 150px;
+            margin-top: 10px;
+            margin-left: 30px;
+        }
     </style>
     
     <script>
@@ -49,7 +55,7 @@
             var senha = document.querySelector('input[type="password"]').value;
             
             // Verificar se o nome de usuário e a senha estão corretos
-            if (nome === "Gabriel" && senha === "123") {
+            if (nome === "Gabriel" && senha === "123" || (nome === "Evandro" && senha === "123" || (nome === "Robson" && senha === "123" || (nome === "Juliano" && senha === "123")))) {
                 alert("Login realizado com sucesso!");
                 window.location.href = "https://app.powerbi.com/view?r=eyJrIjoiNjdjNjg0ZGItOWNhZC00NDA4LTljNjEtNGEyNzBiMjVhNDRmIiwidCI6IjliNGQyYzI0LWM3ODUtNDVmYy04YzQ1LTg4MDI4YmZiYjM0NiJ9";
             } else {
@@ -61,10 +67,11 @@
 </head>
 <body>
     <div>
+        <img src="C:\Users\posve\OneDrive - logsup.com.br\Área de Trabalho\Gabriel\Imagens aleatórias\logo-cielo.png" alt="Descrição da imagem">
         <h1>Login</h1>
-        <input type="text" placeholder="Nome">
+        <input type="text" placeholder="Usuário">
         <br><br>
-        <input type="password" placeholder="Senha">
+        <input type="password" placeholder="******">
         <br><br>
         <button onclick="verificarLogin()">Acessar</button>
     </div>
