@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(45deg, #2B363D, #00AEEF);
+        }
+        div{
+            background-color: rgba(0, 0, 0, 0.9);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 80px;
+            border-radius: 15px;
+            color: #fff;
+        }
+        input{
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+        button{
+            background-color: #00AEEF;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            
+        }
+        button:hover{
+            background-color: deepskyblue;
+            cursor: pointer;
+        }
+    </style>
+    
+    <script>
+        function verificarLogin() {
+            // Obter os valores do nome de usuário e senha
+            var nome = document.querySelector('input[type="text"]').value;
+            var senha = document.querySelector('input[type="password"]').value;
+            
+            // Verificar se o nome de usuário e a senha estão corretos
+            if (nome === "Gabriel" && senha === "123") {
+                alert("Login realizado com sucesso!");
+                window.location.href = "https://app.powerbi.com/view?r=eyJrIjoiNjdjNjg0ZGItOWNhZC00NDA4LTljNjEtNGEyNzBiMjVhNDRmIiwidCI6IjliNGQyYzI0LWM3ODUtNDVmYy04YzQ1LTg4MDI4YmZiYjM0NiJ9";
+            } else {
+                alert("Nome de usuário ou senha incorretos. Tente novamente.");
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div>
+        <h1>Login</h1>
+        <input type="text" placeholder="Nome">
+        <br><br>
+        <input type="password" placeholder="Senha">
+        <br><br>
+        <button onclick="verificarLogin()">Acessar</button>
+    </div>
+</body>
+</html>
